@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: user-provider
+  cloud:
+    inetutils:
+      preferred-networks: 127.0
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: properties
+        name: ${spring.application.name}
+        username: nacos
+        password: Qq5201314.?
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: ${spring.application.name}
+        username: nacos
+        password: Qq5201314.?
+
+
+

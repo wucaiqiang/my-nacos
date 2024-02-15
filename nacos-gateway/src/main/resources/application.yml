@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: nacos-gateway
+  cloud:
+    nacos:
+      config:
+        enabled: true
+        server-addr: 127.0.0.1:8848
+        name: ${spring.application.name}
+        file-extension: properties
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: ${spring.application.name}
+#    gateway:
+#      routes:
+#        - id: order-provider
+#          uri: lb://order-provider
+#          predicates:
+#            - Path=/order/**
+#        - id: user-provider
+#          uri: lb://user-provider
+#          predicates:
+#            - Path=/user/**
