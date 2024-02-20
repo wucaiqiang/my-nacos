@@ -31,7 +31,7 @@ public class JwtsUtils {
         String token = Jwts.builder().setClaims(claims)//
                 .setSubject(USER_SUBJECT) // 主题
                 .setIssuedAt(issuedAt)// 发行时间
-                .setExpiration(new Date(issuedAt.getTime() + expiration * 3 * 1000))// 过期时间
+                .setExpiration(new Date(issuedAt.getTime() + expiration * 12 * 1000))// 过期时间
                 .signWith(SignatureAlgorithm.HS512, SECRET).compact();
         return token;
     }

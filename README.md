@@ -21,6 +21,7 @@ sh shutdown.sh
 
 控制台
 http://localhost:8848/nacos
+默认帐号密码:nacos,nacos
 帐号与密码：nacos,Qq5201314.?
 
 2.docker 数据库启动
